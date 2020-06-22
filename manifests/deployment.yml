@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: "k1-3e49"
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: "k1-3e49"
+    spec:
+      containers:
+        - name: "k1-3e49"
+          image: "shricontainerregistry.azurecr.io/k1"
+          ports:
+          - containerPort: 80
